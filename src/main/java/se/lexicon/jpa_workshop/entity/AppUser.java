@@ -32,9 +32,9 @@ public class AppUser {
     @Setter
     @OneToOne
     @JoinColumn(name = "details_id")
-    private Details details;
+    private Details userDetails;
 
-    public AppUser(String username, String password) {
+    public AppUser(String username, String password, LocalDateTime now) {
         this.username = username;
         this.password = password;
         this.regDate = LocalDateTime.now();
