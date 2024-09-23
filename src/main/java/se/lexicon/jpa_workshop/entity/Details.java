@@ -23,15 +23,20 @@ public class Details {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
     private LocalDate birthDate;
+
+    @OneToOne(mappedBy = "userDetails")
+    private AppUser appUser;
 
     public Details(String email, String name, LocalDate birthDate) {
         this.email = email;
         this.name = name;
         this.birthDate = birthDate;
     }
+
+
 }

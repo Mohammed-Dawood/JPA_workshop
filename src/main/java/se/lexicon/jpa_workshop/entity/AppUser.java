@@ -18,7 +18,7 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false,unique = true, length = 100)
+    @Column(nullable = false, unique = true, length = 100)
     @Setter
     private String username;
 
@@ -26,7 +26,6 @@ public class AppUser {
     @Setter
     private String password;
 
-    @Setter
     private LocalDateTime regDate;
 
     @Setter
@@ -34,9 +33,10 @@ public class AppUser {
     @JoinColumn(name = "details_id")
     private Details userDetails;
 
-    public AppUser(String username, String password, LocalDateTime now) {
+    public AppUser(String username, String password, Details userDetails) {
         this.username = username;
         this.password = password;
         this.regDate = LocalDateTime.now();
+        this.userDetails = userDetails;
     }
 }
