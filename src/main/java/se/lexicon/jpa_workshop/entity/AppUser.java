@@ -26,17 +26,16 @@ public class AppUser {
     @Setter
     private String password;
 
+    @Column(nullable = false, length = 25)
     private LocalDateTime regDate;
 
     @Setter
     @OneToOne
-    @JoinColumn(name = "details_id")
     private Details userDetails;
 
-    public AppUser(String username, String password, Details userDetails) {
+    public AppUser(String username, String password) {
         this.username = username;
         this.password = password;
         this.regDate = LocalDateTime.now();
-        this.userDetails = userDetails;
     }
 }

@@ -29,9 +29,6 @@ public class Details {
     @Column(nullable = false)
     private LocalDate birthDate;
 
-    @OneToOne(mappedBy = "userDetails")
-    private AppUser appUser;
-
     public Details(String email, String name, LocalDate birthDate) {
         this.email = email;
         this.name = name;

@@ -21,8 +21,8 @@ public class MyCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Details userDetails = detailsRepository.save(new Details("Test@Tese.com", "Test", LocalDate.of(1978, 9, 9)));
-        appUserRepository.save(new AppUser("Mohammed", "MMMM", userDetails));
+        detailsRepository.save(new Details("Test@Tese.com", "Test", LocalDate.of(1978, 9, 9)));
+        appUserRepository.save(new AppUser("Mohammed", "MMMM"));
     }
 }
 
