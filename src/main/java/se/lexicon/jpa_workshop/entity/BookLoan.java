@@ -39,4 +39,7 @@ public class BookLoan {
         this.borrower = borrower;
         this.book = book;
     }
+
+    public void setAppUser(AppUser appUser) {
+    }
 }
