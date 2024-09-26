@@ -23,7 +23,7 @@ public interface AppUserRepository extends CrudRepository<AppUser, Integer> {
     Optional<AppUser> findByUserDetails_Id(Integer detailsId);
 
     // Find user by email ignore case.
-    Optional<AppUser> findByUserDetails_EmailIgnoreCase(String email);
+    //Optional<AppUser> findByUserDetails_EmailIgnoreCase(String email);
 
     // (Optional)Add more as needed.
 }
